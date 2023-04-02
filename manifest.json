@@ -1,0 +1,26 @@
+{
+    "name": "Twitter Screenshot Extension",
+    "description": "Takes a screenshot of Twitter home page 'class=art' section.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_title": "Take a screenshot",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://twitter.com/*"],
+            "js": ["main.js"]
+        }
+    ],
+    "icons":{
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "clipboardWrite",
+        "clipboardRead"
+    ]
+}
